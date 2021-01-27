@@ -23,6 +23,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $titletab = "Home";
+        return view('pages.home')->with([
+            "title"=>$titletab
+        ]);
+    }
+
+    public function article()
+    {
+        $title_article = "Article";
+        return view('pages.article')->with([
+            "title"=>$title_article
+        ]);
     }
 }
